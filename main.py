@@ -32,9 +32,9 @@ JOBS=[
 @app.route("/")
 def hello_world():
     return render_template('home.html',Jobs=JOBS,company="jovan")
-@app.route("/,json")
-def JOBS():
-    return Jobs
+@app.route("/Jobs")
+def li_JOBS():
+    return jsonify(JOBS)
 
 if __name__=="__main__":
     app.run(host='0.0.0.0',debug=True)# host is 0.0.0.0 for local host
