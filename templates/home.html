@@ -26,15 +26,24 @@ h1{
       
 </head>
 <body>
+  {% include 'nav.html' %}
   <div class='abc container'>
-    <h1 class="mt-2 mb-5"> {{company}} career </h1>
-  <img class="img-fluid" src='https://images.unsplash.com/photo-1506784926709-22f1ec395907?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2668&q=80' height='300px' > 
   
+  <img class="img-fluid" src='https://images.unsplash.com/photo-1506784926709-22f1ec395907?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2668&q=80' height='300px' > 
+    <h1 class="fw-bold"style="padding-top:15px; color:black;,margin-bottom:16px;"> {{company}} career </h1>
+    <div class='row'>
+      <div class="col-6">
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Non enim praesent elementum facilisis. Amet nulla facilisi morbi tempus. Eu scelerisque felis imperdiet proin fermentum leo vel orci porta. Placerat in egestas erat imperdiet sed. Consectetur purus ut faucibus pulvinar elementum. Elementum nisi quis eleifend quam adipiscing. Aenean et tortor at risus viverra adipiscing at. Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Tincidunt ornare massa eget egestas.
   
-  Ultrices dui sapien eget mi proin sed libero. Eu facilisis sed odio morbi quis commodo. Ultrices neque ornare aenean euismod elementum nisi. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Sit amet aliquam id diam maecenas ultricies mi eget. Habitant morbi tristique senectus et netus. Auctor eu augue ut lectus arcu bibendum at varius vel. Fames ac turpis egestas sed tempus urna et pharetra. Enim tortor at auctor urna nunc id. Duis at tellus at urna condimentum mattis pellentesque id nibh. Ut eu sem integer vitae justo eget magna. Dictum sit amet justo donec enim diam vulputate. Leo a diam sollicitudin tempor id eu. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Lacus vestibulum sed arcu non odio euismod lacinia. Aliquam sem fringilla ut morbi tincidunt. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Vitae semper quis lectus nulla at volutpat diam ut.</p>
+  Ultrices dui sapien eget mi proin sed libero. Eu facilisis sed odio morbi quis commodo. Ultrices neque ornare aenean euismod elementum nisi. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Sit amet aliquam id diam maecenas ultricies mi eget. Habitant morbi tristique senectus et netus. Auctor eu augue ut lectus arcu bibendum at varius vel. Fames ac turpis egestas sed tempus urna et pharetra. Enim tortor at auctor urna nunc id. Duis at tellus at urna condimentum mattis pellentesque id nibh. Ut eu sem integer vitae justo eget magna. Dictum sit amet justo donec enim diam vulputate. Leo a diam sollicitudin tempor id eu. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Lacus vestibulum sed arcu non odio euismod lacinia. Aliquam sem fringilla ut morbi tincidunt. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Vitae semper quis lectus nulla at volutpat diam ut.</p> 
+        
+   </div>
+        <div class='col-6 d-none d-md-block 'style="margin-top:10px;"><!-- for not adding the photo in mobile view we will use d-none d-md-block -->
+        <img class="img-fluid" src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80" >
+    
+    </div>
   
-  
+  </div>
   <h2 class='mt-2 mb-5'class="fw-bold";"> open job  </h2>
   <div style="margin-bottom:8px; text-align:left;">
     {% for job in Jobs %}
@@ -46,11 +55,12 @@ h1{
     {% endfor %}
   </div>  <!-- to access job from main.py by {{jobs}} syntax-->
     <div style='text-align:center;'> <!-- we can also do style like this-->
-   <button type="button" class="btn btn-primary btn-lg">contact us</button>
+   <a href="mailto:gautamnair94@gmail.com?subject=question%20about%20job%20opening&body=your%20question%0D%0A"button type="button" class="btn btn-primary btn-lg">contact us</a>
     </div>
   
     </div>
-  <p class='2 mb-4'> @copyright 2022,Gautam</p>
+  
+{%include 'footer.html'%}
 </body>
   
 </html>
