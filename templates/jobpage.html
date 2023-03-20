@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{job.title}} -Gautam Nair</title>
+
+  {% include 'bootsttrap.html' %}
+</head>
+ <body>
+    {% include 'nav.html' %}
+     {% include 'image.html' %}
+   <h2>Title</h2>
+  <p>{{job.title}}</p>
+  <h2> location</h2>
+   <p>{{job.location}}</p>
+  <h2> salary</h2>
+
+   <p>{{job.salary}}</p>
+   <h2> resposbility</h2>
+  <p>{{job.resposbility}}
+ {% include 'footer.html'  %}
+ </body>
+</html>
